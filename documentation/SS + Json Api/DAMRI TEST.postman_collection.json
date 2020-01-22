@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "47c70456-af90-4118-b07f-0b28e81211c0",
+		"name": "DAMRI TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pegawai All",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_auth_key",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IjIwMjAtMDEtMTQgMDE6MTU6NTUi.vXzQL_O9tJmbFgpiaqVsBF5tdGZk8Ge4vaQijPTr3yQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/damri-test/api/pegawai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"damri-test",
+						"api",
+						"pegawai"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegawai Detail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api_auth_key",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IjIwMjAtMDEtMTQgMDE6MTU6NTUi.vXzQL_O9tJmbFgpiaqVsBF5tdGZk8Ge4vaQijPTr3yQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/damri-test/api/pegawai/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"damri-test",
+						"api",
+						"pegawai",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegawai Add",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_auth_key",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IjIwMjAtMDEtMTQgMDE6MTU6NTUi.vXzQL_O9tJmbFgpiaqVsBF5tdGZk8Ge4vaQijPTr3yQ"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama_pegawai",
+							"value": "Yosep",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "Programmer",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "editan gambar.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/damri-test/api/addpegawai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"damri-test",
+						"api",
+						"addpegawai"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/damri-test/api/gettoken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"damri-test",
+						"api",
+						"gettoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegawai Delete",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api_auth_key",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IjIwMjAtMDEtMTQgMDE6MTU6NTUi.vXzQL_O9tJmbFgpiaqVsBF5tdGZk8Ge4vaQijPTr3yQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/damri-test/api/deletepegawai/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"damri-test",
+						"api",
+						"deletepegawai",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegawai Edit",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_auth_key",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.IjIwMjAtMDEtMTQgMDE6MTU6NTUi.vXzQL_O9tJmbFgpiaqVsBF5tdGZk8Ge4vaQijPTr3yQ",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nama_pegawai",
+							"value": "Adi Winarto",
+							"type": "text"
+						},
+						{
+							"key": "jabatan",
+							"value": "Marketing",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "user cowo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/damri-test/api/editpegawai/14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"damri-test",
+						"api",
+						"editpegawai",
+						"14"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
